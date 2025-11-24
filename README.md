@@ -38,8 +38,6 @@ Per ogni elemento di lavoro (storia, task, item):
 - Non misura il tempo e non valuta persone.  
 - Rappresenta la complessità affrontata, non la precisione della stima.
 
-> Questo parametro è indispensabile: senza ER il framework non può funzionare.
-
 ---
 
 ## Metrica Base (obbligatoria)
@@ -101,7 +99,7 @@ L'HBF propone una dashboard con **due viste principali**.
 - Permette di identificare rapidamente le dimensioni più in squilibrio tra loro, su cui concentrarsi.
 
 **Interazione:**  
-👉 *Click su un asse* -> apre il diagramma a blocchi corrispondente a quella dimensione e aggiorna il radar per le altre dimensioni del livello inferiore.
+- *Click su un asse* -> apre il diagramma a blocchi corrispondente a quella dimensione e aggiorna il radar per le altre dimensioni del livello inferiore.
 
 ---
 
@@ -117,8 +115,8 @@ Ogni blocco contiene:
 - il blocco ideale è un quadrato
 
 **Interazione:**  
-👉 *Click sul blocco* -> drill-down al livello inferiore  
-👉 il radar viene aggiornato per le altre dimensioni di quel livello
+- *Click sul blocco* -> drill-down al livello inferiore  
+il radar viene aggiornato per le altre dimensioni di quel livello
 
 Questa logica rimane identica a ogni livello, riducendo il carico cognitivo.
 
