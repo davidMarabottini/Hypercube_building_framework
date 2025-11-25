@@ -89,30 +89,29 @@ Struttura e KPI sono definiti dal team.
 
 ## Dashboard del Framework
 
-L'HBF propone una dashboard con **due viste principali**.
+L'HBF propone una dashboard con **due grafici principali**.
 
 ---
 
 ### 1. Radar Chart – Vista Macro (Livello Prodotto)
+Il Radar Chart mostra i valori di ciascun KPI a tutti i livelli tranne il più basso.
+Ogni asse rappresenta una metrica normalizzata (valore ideale = 1).
 
-- Mostra **il rapporto tra le due dimensioni analizzate nei kpi**.  
-- Permette di identificare rapidamente le dimensioni più in squilibrio tra loro, su cui concentrarsi.
+Evidenzia immediatamente quali KPI risultano più lontani dall'equilibrio.
 
-**Interazione:**  
-- *Click su un asse* -> apre il diagramma a blocchi corrispondente a quella dimensione e aggiorna il radar per le altre dimensioni del livello inferiore.
+Interazione:
+
+Click su un asse (una metrica) -> apre la vista a blocchi per quella metrica nel livello successivo.
 
 ---
 
 ### 2. Diagrammi a Blocchi – Vista Micro (Drill-Down)
 
-Appare a livello Epica -> Storia -> Task.
+Appare a tutti i livelli tranne il più alto.
 
 Ogni blocco contiene:
-
-- **altezza** = numeratore * peso della metrica (es. ER * peso)  
-- **larghezza** = denominatore della metrica (es. ET)  
-- **rapporto altezza/larghezza** indica lo squilibrio della dimensione  
-- il blocco ideale è un quadrato
+Ogni blocco ha altezza pari al valore della kpi per il blocco stesso
+Inoltre è presente un threshold ad altezza 1 che rappresenta il valore ideale
 
 **Interazione:**  
 - *Click sul blocco* -> drill-down al livello inferiore  
