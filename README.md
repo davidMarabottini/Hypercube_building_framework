@@ -1,7 +1,7 @@
 # Hypercube Building Framework  
 ### Manifesto per una Crescita Bilanciata
 
-L'**Hypercube Building Framework (HBF)** è un modello operativo progettato per rendere **visibile, interpretabile e misurabile l'equilibrio del processo di sviluppo software**.  
+L'**Hypercube Building Framework (HBF)** è un modello operativo progettato per rendere **visibile, interpretabile e misurabile l'equilibrio di un processo complesso**, con particolare attenzione allo sviluppo software ma applicabile a qualunque dominio.  
 Lo fa attraverso:
 
 - **metriche normalizzate**,  
@@ -9,119 +9,87 @@ Lo fa attraverso:
 - **navigazione multilivello**,  
 - **valutazioni retrospettive** del lavoro effettuato.
 
-L'HBF **non sostituisce** framework Agili o evidence-based (Scrum, Kanban, EBM):  
-li **integra**, fornendo un layer aggiuntivo di trasparenza: *una fotografia continua dello sforzo reale*, osservabile dal livello prodotto fino al singolo task.
+L'HBF **non sostituisce** framework Agili o evidence-based o modelli organizzativi esistenti, li **potenzia**, fornendo una rappresentazione delle dinamiche interne del sistema.
 
 ---
 
-## Obiettivi
+## Obiettivi del framework
 
-- Evidenziare squilibri nello sforzo, nella qualità, nel flusso e nella distribuzione del lavoro, o in qualunque area misurabile come rapporto tra 2 kpi.  
-- Favorire discussioni basate su dati, non percezioni.  
-- Offrire navigazione coerente dai livelli macro (prodotto) ai livelli micro (task).  
-- Supportare il miglioramento continuo tramite metriche stabili, semplici e intuitive.
+Il framework permette di:
+- Individuare squilibri tra dimensioni del processo.
+- Favorire discussioni basate su dati, non percezioni.
+- Offrire una navigazione coerente e continua tra livelli diversi del lavoro.
+- Misurare l'equilibrio del sistema con metodi stabili e non manipolabili.
+- Scalare verso più domini (dev, business, ops…) senza perdere leggibilità.
 
-L'HBF misura **l'equilibrio del processo**, non l'impatto sul business.  
-Le metriche di outcome possono essere integrate come layer aggiuntivo.
-
----
-
-## Parametri Obbligatori
-
-### Effort Reale (ER)
-
-Per ogni elemento di lavoro (storia, task, item):
-
-- **Effort Teorico (ET)** = stima iniziale della storia definita dal team.  
-- **Effort Reale (ER)** = valutazione retrospettiva della complessità realmente incontrata.  
-- L'ER viene valutato in maniera indipendente da ogni revisore **durante la code review**, il suo valore sarà dato dalla media delle valutazioni.  
-- Non misura il tempo e non valuta persone.  
-- Rappresenta la complessità affrontata, non la precisione della stima.
+HBF misura l'equilibrio del processo, non il valore generato o la performance delle persone.
 
 ---
 
-## Metrica Base (obbligatoria)
+## Fondamenti del framework
 
-### **ER / ET**  
-*(Effort Reale / Effort Teorico)*  
-**Peso fisso = 1**
+HBF si basa su metriche espresse come:
+> Rapporto noralizzato, con valore ideale = 1
 
-- Valore ideale = **1**  
-- > 1 -> complessità inattesa, impedimenti, gap nel DoD  
-- < 1 -> sovrastima o semplificazione emergente  
+Il framework non impone metriche specifiche
+Alcune delle metriche utilizzabili saranno definite in un file esterno che descrive:
+* Cosa misura una metrica
+* Come si calcola
+* A quale dominio appartiene
+* In quali contesti è raccomandata, opzionale o obbligatoria
+* Se richiede un flusso particolare per essere calcolata
 
-Questa metrica è la **dimensione principale dell'equilibrio**.
-
----
-
-## Metriche Aggiuntive (Configurabili)
-
-Il team può aggiungere ulteriori KPI: bugfix, manutenzione, sicurezza, flusso, refactoring, ecc.  
-
-Tutte le metriche aggiuntive devono:
-
-- essere opzionali,  
-- avere pesi configurabili,  
-- rimanere stabili nel tempo per preservare la leggibilità storica,  
-- essere normalizzate affinché il valore ideale sia **1**.
+Questo rende il framework agnostico, modulare e configurabile ma fornisce al tempo stesso delle specifiche minime che possono fungere da bussola per un team
 
 ---
 
 ## Valori Fondamentali del Framework
 
 ### **1. Equilibrio**
-Il comportamento ideale tende a 1.  
-Deviazioni evidenziano squilibri tra dimensioni del processo.
+Ogni dimensione dovrebbe tendere a 1.  
+Deviazioni evidenziano squilibri da indagare, non colpe
 
 ### **2. Trasparenza**
-I dati non misurano persone o performance individuali.  
-Riduce incentivi al “gaming” e mantiene il focus sul processo.
+Metriche, valori e parametri devono essere impostate in modo trasparente.
+Il framework osserva fenomeni del processo, non singole persone.
+I dati impostati dal team e l'interpretazione dei risultati devono essere fatti con responsabilità e trasparenza, per il bene del team e del progetto, e non per vantaggi del singolo
 
 ### **3. Stabilità**
-Pesi e KPI non cambiano durante il lavoro attivo.  
-Le variazioni avvengono solo in momenti dedicati (es. retrospettiva o momento dedicato) e sono discussi dall'intero team.
+Una volta configurate, metriche e pesi non cambiano durante il lavoro attivo.
+Eventuali modifiche avvengono in momenti controllati (retrospettive, revisioni periodiche) e sono discussi dall'intero team.
+Il tempo speso per l'eventuale riallineamento di metriche e pesi deve un momento timeboxed di durata proporzionale alla lunghezza dello sprint, sarà scopo dello sprint capire quanto tempo dedicarvi.
 
 ### **4. Adattabilità**
-Il framework si adatta a qualsiasi flusso o gerarchia.  
-Struttura e KPI sono definiti dal team.
+Qualunque metrica ratio normalizzata può essere integrata.
+Qualunque struttura gerarchica può essere navigata.
 
 ---
+
+-----------------------------ARRIVATO QUI-----------------------
 
 ## Dashboard del Framework
 
-L'HBF propone una dashboard con **due grafici principali**.
+HBF utilizza una singola vista composta da due elementi complementari:
 
----
+### 1. Radar Chart – La mappa
+Il radar rappresenta sempre la mappa delle metriche attive per il dominio e il livello selezionato.
 
-### 1. Radar Chart – Vista Macro (Livello Prodotto)
-Il Radar Chart mostra i valori di ciascun KPI a tutti i livelli tranne il più basso.
-Ogni asse rappresenta una metrica normalizzata (valore ideale = 1).
+Ogni asse mostra quanto una dimensione è vicina o lontana dal'’equilibrio.
 
-Evidenzia immediatamente quali KPI risultano più lontani dall'equilibrio.
+Il radar non cambia pagina:
+rimane sempre visibile e aggiornato.
 
-Interazione:
 
-Click su un asse (una metrica) -> apre la vista a blocchi per quella metrica nel livello successivo.
+### 2. Diagrammi a Blocchi – Il dettaglio
 
----
+Quando l'utente seleziona una metrica sul radar:
 
-### 2. Diagrammi a Blocchi – Vista Micro (Drill-Down)
+* il Block Chart mostra la decomposizione locale
+* ogni blocco rappresenta l'equilibrio di un elemento a livello immediatamente successivo a quello mostrato dal radar
+* l'altezza del blocco è il valore della metrica
+* una linea a quota 1 rappresenta l'equilibrio ideale
 
-Appare a tutti i livelli tranne il più alto.
-
-Ogni blocco contiene:
-Ogni blocco ha altezza pari al valore della kpi per il blocco stesso
-Inoltre è presente un threshold ad altezza 1 che rappresenta il valore ideale
-
-**Interazione:**  
-- *Click sul blocco* -> drill-down al livello inferiore  
-il radar viene aggiornato per le altre dimensioni di quel livello
-
-Questa logica rimane identica a ogni livello, riducendo il carico cognitivo.
-
----
-
-## Navigazione Gerarchica
+### Navigazione Gerarchica
 
 La struttura è configurabile. Esempio:
 
@@ -130,15 +98,56 @@ La struttura è configurabile. Esempio:
   -> **Storia**  
   -> **Task**
 
-Ogni livello mostra una proiezione locale dell'ipercubo, coerente con la dashboard macro.
+La navigazione è semplice e uniforme ad ogni livello.
+
+esempio:
+
+1. Entri sulla dashboard a livello di prodotto -> vedi il radar chart
+2. Clicchi sulla metrica che vuoi esplorare -> si apre il diagramma a blocchi che mostra la metrica per ogni epica
+3. Al click sul blocco il radar chart mostrerà gli equilibri di ogni metrica a livello di epica mentre il diagramma a blocchi mostrerà l'equilirbio a livello di task
+4. Al click su un altra metrica a livello di radar chart i blocchi visualizzeranno gli equilibri rispetto all'altra metrica
+5. al click su una freccia il sistema potrà navigare a livello superiore
 
 ---
 
-## Miglioramento Continuo
+## Scaled HBF - ipercubi multipli per domini multipli
 
-L'HBF:
+Il framework HBF as is presenta problemi di scalabilità e può essere dispersivo quando le metriche diventano troppe, per questo vale l'indicazione di tenere un numero di metriche basso.
+Se ci fosse una struttura complessa e ci fosse la necessità di aumentare il numero di metriche, il framework va scalato.
+Per questo nasce **Scaled HBF**
 
-- non diagnostica cause radice,  
+Scaled HBF non si basa più sulla generazione di un ortotopo a livello singolo. Permette piuttosto di creare più iperrettangoli divisi in aree funzionali.
+Un esempio potrebbe essere:
+**Development**
+* Effort_reale/effort_stimato
+* Storie_unit_test/storie_necessitano_unit_test
+* Storie_documentate/storie_necessitano_documentazion
+* Bug_fix*correttivo/(bug_fix+feat)
+
+**Business**
+* Impatto_atteso/impatto_reale
+* ROI(visto come proporzione)
+* Giorni_previsti/giorni_reali
+
+Ogni iperrettangolo è:
+* Indipendente
+* Configurabile tramite metriche di dominio
+* Leggibile e navigabile tramite la stessa logica
+* Presenta un modo standardizzato per mostrare l'equilibrio
+
+### Risultato:
+Ogni ruolo rimane focalizzato solo su ciò che serve, possono essere fatte analisi solo su un elemento, riducendo il rumore esterno
+
+### Navigazione tra ipercubi (scaled mode)
+Prima di accedere ai dati della propria area di competenza, l'utente dovrà avere la possibilità di scegliere l'area, poi si troverà di fronte alla stessa dashboard presentata in precedenza, con la differenza che dovrà avere la visibilità dell'area in cui si trova e la possibilità di cambiarla in modo rapido
+
+---
+
+## Cosa non fa e cosa fa EBF
+
+HBF:
+
+- non diagnostica le cause alla radice  
 - non prescrive soluzioni operative,  
 - non valuta individui.
 
@@ -153,43 +162,44 @@ Mostra **dove guardare**. Il *perché* e il *come migliorare* emergono da:
 ## Cosa il Framework NON è
 
 - Non è un metodo di stima alternativa.  
-- Non predice valore di business o outcome.  
+- Non predice valore di business.  
 - Non misura performance individuali.  
 - Non sostituisce processi esistenti.  
 - Non identifica problemi strutturali automaticamente.
 
-È un **layer operativo di consapevolezza**, non un processo.
+HBF è un sistema di osservazione degli equilibri del team, mostra dove guardare, non cosa fare
 
 ---
 
 # Conclusione
 
-L'HBF combina:
+Hypercube Building Framework offre:
 
-- stabilità metrica,  
-- visualizzazioni intuitive,  
-- navigazione multilivello coerente,  
-- rigore nella normalizzazione.
+- una vista unica chiara (radar + blocchi)
+- navigazione ricorsiva e intuitiva
+- modularità totale delle metriche
+- scalabilità tramite ipercubi multipli
+- stabilità nel tempo
+- aderenza rigorosa alla normalizzazione
 
-Rende l'equilibrio **visibile**, guidando il miglioramento direttamente dal team.
+È una piattaforma per rendere l'equilibrio visibile, scalabile e comprensibile, trasformando i dati del processo in uno spazio navigabile e trasparente.
 
 ---
 
 # Appendice — Fondamento Geometrico (Facoltativo)
 
-L'HBF modella lo stato di salute del processo di sviluppo come un **Ortòtopo** (un rettangolo multidimensionale).
+HBF sta per Hypercube Building Framework, il nome può sembrare quantomeno complesso.
 
-* Ogni **metrica normalizzata** (il rapporto tra due KPI moltiplicato per il peso) è trattata come un **lato** di questo Ortòtopo.
-* L'obiettivo è la convergenza verso l'**Ipercubo**, la forma geometrica ideale dove tutti i lati hanno lunghezza 1 (l'equilibrio perfetto).
+In questa sezione voglio spiegare la metafora che ha dato origine al nome e il ragionamento che vi sta dietro.
 
-La visualizzazione diagnostica si articola su due livelli funzionali:
+* Ogni metrica può essere vista come una dimensione all'interno di un iperpiano
 
-1.  **Radar Chart (Vista Macro):** Rappresenta i **lati** dell'Ortòtopo. Mostra la **lunghezza finale** di tutti i lati in relazione a 1, evidenziando immediatamente la dimensione del processo più deforme.
-2.  **Diagramma a Blocchi (Vista Micro):** Rappresenta la **faccia 2D** che forma quel lato. Visualizza il rapporto tra le due dimensioni (Numeratore e Denominatore, con il peso applicato) che hanno determinato la lunghezza del lato, fornendo la causa esatta dello squilibrio.
+**HBF ci fornisce uno strumento per trasformare le nostre metriche in lati di un ortotopo e visualizzare i lati e come ciò si distribuisce a livello più basso**
 
-Questa logica garantisce che il *layer* di visualizzazione sia perfettamente coerente con la fondazione geometrica, pur mantenendo la navigazione intuitiva.
+* I valori delle metriche diventano automaticamente i lati dell'ortotropo stesso
+* Il grafico a radar mostra il valore di tutti i lati dell'ortotopo assieme a livello corrente, e da la possibilità di vedere quale lato ispezionare
+* Il grafico a blocchi mostra la scomposizione dell'ortotopo a livello successivo e da la possibilità di scegliere quale componente visualizzare
+* Scaled HBF si basa sulla creazione di diversi ipercubi paralleli, uno per ogni dominio.
 
-> **Nota:**
-> Non è necessario comprendere l'ipercubo per utilizzare il framework.  
-> La metafora serve a mantenere eleganza e stabilità matematica, ma l'uso pratico richiede solo la lettura delle dashboard e dei diagrammi.
-
+> *Nota*
+> La metafora geometrica cerca di dare coerenza, estetica e stabilità matematica al sistema, inoltre, dato che una forma geometrica multidimensionale è traducibile in una matrice, potrebbe essere possibile ipotizzare visualizzazioni più matematiche e meccanismi di analisi anche più avanzate
