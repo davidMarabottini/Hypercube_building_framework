@@ -38,12 +38,7 @@ Esempio: vogliamo che durante lo sprint, il team dedichi 1/3 del lavoro ai bugs.
 
 Il framework non impone metriche specifiche
 
-**Nota** Intendo creare un file dove andrò a definire delle metriche suggerite o obbligatorie per far funzionare il framework, specificando:
-* Cosa misura una metrica
-* Come si calcola
-* A quale dominio appartiene
-* In quali contesti è raccomandata, opzionale o obbligatoria
-* Se richiede un flusso particolare per essere calcolata
+**Nota**: Alcune metriche plausibili sono indicate nel file di [metriche aggiuntive](./additive_metrics.md)
 
 Questo rende il framework **agnostico, modulare e configurabile** ma fornisce al tempo stesso delle specifiche minime che possono fungere da bussola per un team
 
