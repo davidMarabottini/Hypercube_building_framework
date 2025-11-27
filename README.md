@@ -90,6 +90,7 @@ Quando l'utente seleziona una metrica sul radar:
 Ma per fare un esempio ci basiamo sulla seguente struttura: 
 **Prodotto** -> **Epica** -> **Storia** -> **Task**
 
+[Prototipo in figma](https://www.figma.com/proto/fARhEGDA5fL4OYTZMjnUqg/Untitled?node-id=17-427&t=empgUhbajgpucSai-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=17%3A427)
 
 Esempio:
 
